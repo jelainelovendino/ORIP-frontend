@@ -1,5 +1,5 @@
 'use client';
-import { FaGraduationCap, FaArrowRight,  FaHome, FaThLarge } from 'react-icons/fa';
+import { FaGraduationCap, FaArrowRight,  FaHome, FaThLarge, FaUserCircle } from 'react-icons/fa';
 import { MdUpload } from 'react-icons/md';
 
 export default function HomePage() {
@@ -34,8 +34,9 @@ export default function HomePage() {
         <div className="flex justify-center gap-4 mt-8">
           <a 
             href="/upload"
-            className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700"
+            className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 flex items-center gap-2"
           >
+            <MdUpload className="text-xl" />
             Upload your projects
           </a>
 
@@ -52,6 +53,7 @@ export default function HomePage() {
       <div className="max-w-5xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 px-6">
         
         <div className="bg-blue-300 p-6 rounded-md shadow text-center">
+          <FaUserCircle className="text-4xl mx-auto mb-3" />
           <h3 className="font-bold text-xl">Build Your Profile</h3>
           <p className="mt-2 text-gray-700">
             Create a professional profile showcasing your academic background and projects.
@@ -59,6 +61,7 @@ export default function HomePage() {
         </div>
 
         <div className="bg-blue-300 p-6 rounded-md shadow text-center">
+          <MdUpload className="text-4xl mx-auto mb-3" />
           <h3 className="font-bold text-xl">Upload Projects</h3>
           <p className="mt-2 text-gray-700">
             Share your research work, prototypes, and innovations with detailed descriptions.
