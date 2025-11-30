@@ -1,5 +1,7 @@
 "use client";
 
+import { FaGraduationCap, FaArrowRight,  FaHome, FaThLarge, FaUserCircle } from 'react-icons/fa';
+import { MdUpload } from 'react-icons/md';
 import { useState } from "react";
 import axios from "axios";
 
@@ -33,14 +35,15 @@ export default function LoginPage() {
       
       {/* NAVBAR */}
       <nav className="flex items-center justify-between px-6 py-4 bg-blue-600 text-white shadow">
-        <div className="font-bold text-lg">
+        <div className="font-bold text-lg flex items-center gap-2">
+          <FaGraduationCap className="text-white text-3xl" />
           Open Research and Innovation Portfolio
         </div>
 
         <div className="flex items-center gap-6">
-          <a href="/" className="hover:underline">Home</a>
-          <a href="/projects" className="hover:underline">Explore Projects</a>
-          <a href="/login" className="hover:underline">Log in</a>
+          <a href="/" className="flex items-center gap-1 hover:underline"><FaHome />Home</a>
+          <a href="/projects" className="flex items-center gap-1 hover:underline"><FaThLarge className="text-white" />Explore Projects</a>
+          <a href="/login" className="flex items-center gap-1 hover:underline"><FaArrowRight className="text-white" />Log in</a>
         </div>
       </nav>
 
