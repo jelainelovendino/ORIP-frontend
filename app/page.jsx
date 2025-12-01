@@ -14,8 +14,8 @@ export default function HomePage() {
         </div>
 
         <div className="flex items-center gap-6">
-          <a href="/" className="flex items-center gap-1 hover:underline"><FaHome />Home</a>
-          <a href="/projects" className="flex items-center gap-1 hover:underline"><FaThLarge className="text-white" />Explore Projects</a>
+          <a href="/login" className="flex items-center gap-1 hover:underline"><FaHome />Home</a>
+          <a href="/login" className="flex items-center gap-1 hover:underline"><FaThLarge className="text-white" />Explore Projects</a>
           <a href="/login" className="flex items-center gap-1 hover:underline"><FaArrowRight className="text-white" />Log in</a>
         </div>
       </nav>
@@ -33,7 +33,7 @@ export default function HomePage() {
 
         <div className="flex justify-center gap-4 mt-8">
           <a 
-            href="/upload"
+            href="/login"
             className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 flex items-center gap-2"
           >
             <MdUpload className="text-xl" />
@@ -41,7 +41,7 @@ export default function HomePage() {
           </a>
 
           <a 
-            href="/projects"
+            href="/login"
             className="px-6 py-3 bg-white border rounded-md shadow hover:bg-gray-100"
           >
             Explore Projects →
@@ -89,7 +89,7 @@ export default function HomePage() {
       <div className="text-center mt-10 mb-16">
         <p className="text-gray-700 mb-3">Ready to Share Your Work?</p>
         <a 
-          href="/register"
+          href="/login"
           className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700"
         >
           Get Started
