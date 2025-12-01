@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#E6EEF8" />
+  <g fill="#94A3B8">
+    <rect x="40" y="60" width="560" height="240" rx="12" fill="#CBD5E1" />
+    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#475569" fontSize="28">No Image</text>
+  </g>
+</svg>
