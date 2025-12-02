@@ -1,7 +1,6 @@
 "use client";
 
-import { FaGraduationCap, FaArrowRight,  FaHome, FaThLarge, FaUserCircle } from 'react-icons/fa';
-import { MdUpload } from 'react-icons/md';
+import { FaGraduationCap, FaArrowRight,  FaHome, FaThLarge } from 'react-icons/fa';
 import { useState } from "react";
 import axios from "axios";
 
@@ -21,7 +20,12 @@ export default function LoginPage() {
       });
 
       // save token
-      localStorage.setItem("token", response.data.token);
+      const token = response.data.access_token || response.data.token || response.data.token_value;
+      const tokenType = response.data.token_type || response.data.tokenType || 'Bearer';
+      if (token) {
+        localStorage.setItem("token", token);
+        localStorage.setItem("token_type", tokenType);
+      }
 
       // redirect
       window.location.href = "/projects";
@@ -48,73 +52,73 @@ export default function LoginPage() {
       </nav>
 
       {/* HEADER */}
-      <div className="text-center mt-12">
-        <h1 className="text-2xl font-bold">Open Your Research & Innovation Portfolio</h1>
-        <p className="mt-2 text-gray-700">
+      <div className="text-center mt-16 px-6">
+        <h1 className="text-3xl font-bold text-gray-900">Open Your Research & Innovation Portfolio</h1>
+        <p className="mt-3 text-gray-700 text-lg leading-relaxed">
           Join the community of innovators and researchers
         </p>
       </div>
 
       {/* SWITCH TABS */}
-      <div className="flex justify-center mt-8">
-        <div className="flex bg-gray-200 rounded-full overflow-hidden">
-          <a href="/login" className="px-10 py-2 bg-blue-500 text-white font-semibold">
+      <div className="flex justify-center mt-10">
+        <div className="flex bg-gray-200 rounded-full overflow-hidden shadow">
+          <a href="/login" className="px-10 py-2 bg-blue-500 text-white font-semibold rounded-full">
             Log in
           </a>
-          <a href="/register" className="px-10 py-2 font-semibold text-gray-700">
+          <a href="/register" className="px-10 py-2 font-semibold text-gray-700 hover:bg-gray-300 transition-colors">
             Register
           </a>
         </div>
       </div>
 
       {/* LOGIN FORM */}
-      <div className="max-w-md mx-auto bg-blue-300 p-8 rounded-lg shadow mt-8">
-        
-        {/* Email */}
-        <label className="font-semibold">Email</label>
-        <input
-          className="w-full p-3 bg-white rounded-md mt-1 mb-4 outline-none"
-          placeholder="your.email@gmail.com"
-          onChange={(e) => setEmail(e.target.value)}
-        />
+      <div className="max-w-md mx-auto bg-blue-300 p-8 rounded-lg shadow mt-10">
+        <form onSubmit={handleLogin}>
+          {/* Email */}
+          <label className="font-semibold text-gray-900">Email</label>
+          <input
+            type="email"
+            value={email}
+            className="w-full p-3 bg-white rounded-md mt-2 mb-5 outline-none border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+            placeholder="your.email@gmail.com"
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
 
-        {/* Password */}
-        <label className="font-semibold">Password</label>
-        <input
-          type="password"
-          className="w-full p-3 bg-white rounded-md mt-1 mb-4 outline-none"
-          placeholder="••••••••"
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          {/* Password */}
+          <label className="font-semibold text-gray-900">Password</label>
+          <input
+            type="password"
+            value={password}
+            className="w-full p-3 bg-white rounded-md mt-2 mb-6 outline-none border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+            placeholder="••••••••"
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
-        <p className="text-sm text-gray-700 mb-4">
-          Demo Credentials: <br />
-          Email: any email <br />
-          Password: any password
-        </p>
+          {error && (
+            <p className="text-red-600 font-semibold text-center mb-4 bg-red-50 p-3 rounded-md">
+              {error}
+            </p>
+          )}
 
-        {error && (
-          <p className="text-red-600 font-semibold text-center mb-2">
-            {error}
-          </p>
-        )}
+          {/* Buttons */}
+          <div className="flex gap-4">
+            <button
+              type="submit"
+              className="flex-1 py-3 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Log in
+            </button>
 
-        {/* Buttons */}
-        <div className="flex gap-4">
-          <button
-            onClick={handleLogin}
-            className="w-full py-2 bg-blue-600 text-white rounded-md"
-          >
-            Log in
-          </button>
-
-          <a
-            href="/"
-            className="w-full py-2 bg-red-500 text-white rounded-md text-center"
-          >
-            Cancel
-          </a>
-        </div>
+            <a
+              href="/"
+              className="flex-1 py-3 bg-red-500 text-white rounded-md text-center font-semibold hover:bg-red-600 transition-colors"
+            >
+              Cancel
+            </a>
+          </div>
+        </form>
       </div>
     </div>
   );
