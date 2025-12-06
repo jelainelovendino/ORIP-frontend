@@ -71,12 +71,12 @@ export default function HomePage() {
       </nav>
 
       {/* HERO SECTION */}
-      <section className="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 leading-tight">
+      <section className="max-w-4xl mx-auto px-6 pt-20 pb-8 md:pb-16 text-center">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-blue-900 leading-tight">
           Showcase Your Research & Innovation
         </h1>
 
-        <p className="mt-5 text-base md:text-lg leading-relaxed text-blue-900/90 max-w-2xl mx-auto">
+        <p className="mt-5 text-sm md:text-lg leading-relaxed text-blue-900/90 max-w-2xl mx-auto">
           A platform for students and researchers to share projects, prototypes, and mini-research work. 
           Build your portfolio, get feedback, and connect with fellow innovators.
         </p>
@@ -100,24 +100,24 @@ export default function HomePage() {
       </section>
 
       {/* FEATURES SECTION */}
-      <section className="max-w-5xl mx-auto px-6 mt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-          <div className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 p-7 text-center border border-blue-100 flex flex-col items-center">
-            <div className="mb-4 inline-flex items-center justify-center rounded-xl border border-blue-300 p-3 bg-blue-50">
-              <FaUserCircle className="text-3xl text-blue-700" />
+      <section className="max-w-5xl mx-auto px-6 mt-8 md:mt-16 pb-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 mt-6">
+          <div className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 p-4 md:p-7 text-center border border-blue-100 flex flex-col items-center">
+            <div className="mb-3 md:mb-4 inline-flex items-center justify-center rounded-xl border border-blue-300 p-2 md:p-3 bg-blue-50">
+              <FaUserCircle className="text-2xl md:text-3xl text-blue-700" />
             </div>
-            <h3 className="text-xl font-bold text-blue-900 mb-2">Build Your Profile</h3>
-            <p className="text-sm md:text-base leading-relaxed text-blue-900/90 max-w-sm mx-auto">
+            <h3 className="text-base md:text-xl font-bold text-blue-900 mb-2">Build Your Profile</h3>
+            <p className="text-xs md:text-base leading-relaxed text-blue-900/90 max-w-sm mx-auto">
               Create a professional profile showcasing your academic background and projects.
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 p-7 text-center border border-blue-100 flex flex-col items-center">
-            <div className="mb-4 inline-flex items-center justify-center rounded-xl border border-blue-300 p-3 bg-blue-50">
-              <MdUpload className="text-3xl text-blue-700" />
+          <div className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 p-4 md:p-7 text-center border border-blue-100 flex flex-col items-center">
+            <div className="mb-3 md:mb-4 inline-flex items-center justify-center rounded-xl border border-blue-300 p-2 md:p-3 bg-blue-50">
+              <MdUpload className="text-2xl md:text-3xl text-blue-700" />
             </div>
-            <h3 className="text-xl font-bold text-blue-900 mb-2">Upload Projects</h3>
-            <p className="text-sm md:text-base leading-relaxed text-blue-900/90 max-w-sm mx-auto">
+            <h3 className="text-base md:text-xl font-bold text-blue-900 mb-2">Upload Projects</h3>
+            <p className="text-xs md:text-base leading-relaxed text-blue-900/90 max-w-sm mx-auto">
               Share your research work, prototypes, and innovations with detailed descriptions.
             </p>
           </div>
@@ -125,25 +125,25 @@ export default function HomePage() {
       </section>
 
       {/* STATS */}
-      <section className="bg-blue-200 mt-12 py-12 text-center">
+      <section className="bg-blue-200 mt-12 py-8 text-center">
         <div className="max-w-5xl mx-auto px-8">
-          <h2 className="text-2xl font-bold text-blue-900 mb-8">Trusted by the Community</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <h2 className="text-2xl font-bold text-blue-900 mb-6">Trusted by the Community</h2>
+          <div className="flex flex-wrap justify-center gap-6 md:gap-16">
             <div className="flex flex-col items-center">
-              <div className="text-2xl md:text-3xl font-extrabold text-blue-900 leading-none">150+</div>
-              <div className="mt-3 text-sm md:text-base font-semibold text-blue-900/90">
+              <div className="text-xl md:text-2xl font-extrabold text-blue-900 leading-none">150+</div>
+              <div className="mt-1 text-xs md:text-sm font-semibold text-blue-900/90">
                 Active Researchers
               </div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="text-2xl md:text-3xl font-extrabold text-blue-900 leading-none">300+</div>
-              <div className="mt-3 text-sm md:text-base font-semibold text-blue-900/90">
+              <div className="text-xl md:text-2xl font-extrabold text-blue-900 leading-none">300+</div>
+              <div className="mt-1 text-xs md:text-sm font-semibold text-blue-900/90">
                 Projects Shared
               </div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="text-2xl md:text-3xl font-extrabold text-blue-900 leading-none">50+</div>
-              <div className="mt-3 text-sm md:text-base font-semibold text-blue-900/90">
+              <div className="text-xl md:text-2xl font-extrabold text-blue-900 leading-none">50+</div>
+              <div className="mt-1 text-xs md:text-sm font-semibold text-blue-900/90">
                 Universities
               </div>
             </div>
