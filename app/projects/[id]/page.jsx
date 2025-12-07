@@ -22,6 +22,7 @@ export default function ProjectPage() {
   const { id } = useParams();
   const [project, setProject] = useState(null);
   const [isAuthed, setIsAuthed] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [codePreview, setCodePreview] = useState(null);
   const [loadingPreview, setLoadingPreview] = useState(false);
@@ -42,7 +43,9 @@ export default function ProjectPage() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
+    const userRole = localStorage.getItem('user_role');
     setIsAuthed(!!token);
+    setIsAdmin(userRole === 'admin');
   }, []);
 
   const fetchProject = async () => {
@@ -156,27 +159,41 @@ export default function ProjectPage() {
                 <span>Home</span>
               </a>
             )}
-            <a
-              href="/projects"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
-            >
-              <FaThLarge className="text-sm" />
-              <span>Explore</span>
-            </a>
-            <a
-              href="/upload"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
-            >
-              <FaUpload className="text-sm" />
-              <span>Upload</span>
-            </a>
-            <a
-              href="/profile"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
-            >
-              <FaUser className="text-sm" />
-              <span>Profile</span>
-            </a>
+            {isAdmin ? (
+              <>
+                <a
+                  href="/admin"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+                >
+                  <FaThLarge className="text-sm" />
+                  <span>Admin Dashboard</span>
+                </a>
+              </>
+            ) : (
+              <>
+                <a
+                  href="/projects"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+                >
+                  <FaThLarge className="text-sm" />
+                  <span>Explore</span>
+                </a>
+                <a
+                  href="/upload"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+                >
+                  <FaUpload className="text-sm" />
+                  <span>Upload</span>
+                </a>
+                <a
+                  href="/profile"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+                >
+                  <FaUser className="text-sm" />
+                  <span>Profile</span>
+                </a>
+              </>
+            )}
             {isAuthed && (
               <button
                 onClick={() => {
@@ -212,27 +229,41 @@ export default function ProjectPage() {
                 <FaHome /> Home
               </a>
             )}
-            <a
-              href="/projects"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <FaThLarge /> Explore
-            </a>
-            <a
-              href="/upload"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <FaUpload /> Upload
-            </a>
-            <a
-              href="/profile"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <FaUser /> Profile
-            </a>
+            {isAdmin ? (
+              <>
+                <a
+                  href="/admin"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <FaThLarge /> Admin Dashboard
+                </a>
+              </>
+            ) : (
+              <>
+                <a
+                  href="/projects"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <FaThLarge /> Explore
+                </a>
+                <a
+                  href="/upload"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <FaUpload /> Upload
+                </a>
+                <a
+                  href="/profile"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <FaUser /> Profile
+                </a>
+              </>
+            )}
             {isAuthed && (
               <button
                 onClick={() => {
@@ -248,7 +279,7 @@ export default function ProjectPage() {
         )}
       </nav>
 
-      {/* CONTENT */}
+      {/* MAIN CONTENT */}
       <div className="px-4 md:px-12 py-6 md:py-12 max-w-5xl mx-auto">
 
         <a href="/projects" className="flex items-center gap-2 text-blue-600 mb-4 md:mb-8 hover:text-blue-700 transition font-semibold text-xs md:text-base">
