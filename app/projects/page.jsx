@@ -63,14 +63,14 @@ export default function ExploreProjects() {
     <div className="min-h-screen bg-[#d7dff0]">
 
       {/* NAVBAR */}
-      <nav className="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+      <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
           {/* Logo + full name */}
           <a href="/" className="flex items-center gap-3 hover:opacity-90 transition">
             <FaGraduationCap className="text-white text-4xl" />
             <div className="flex flex-col leading-tight">
               <span className="text-xl md:text-2xl font-extrabold text-white">ORIP</span>
-              <span className="text-xs md:text-sm font-semibold text-blue-100">
+              <span className="text-xs md:text-sm font-semibold text-cyan-100">
                 Open Research and Innovation Portfolio
               </span>
             </div>
@@ -80,21 +80,21 @@ export default function ExploreProjects() {
           <div className="hidden md:flex items-center gap-4 text-sm font-medium">
             <a
               href="/projects"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-blue-700 font-semibold shadow-sm hover:shadow-md transition-shadow"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-cyan-600 font-semibold shadow-sm hover:shadow-md transition-shadow"
             >
               <FaThLarge className="text-sm" />
               <span>Explore</span>
             </a>
             <a
               href="/upload"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
             >
               <FaUpload className="text-sm" />
               <span>Upload</span>
             </a>
             <a
               href="/profile"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
             >
               <FaUser className="text-sm" />
               <span>Profile</span>
@@ -122,24 +122,24 @@ export default function ExploreProjects() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-blue-700 px-6 py-4 space-y-3 border-t border-blue-500">
+          <div className="md:hidden bg-cyan-700 px-6 py-4 space-y-3 border-t border-cyan-500">
             <a
               href="/projects"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               <FaThLarge /> Explore
             </a>
             <a
               href="/upload"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               <FaUpload /> Upload
             </a>
             <a
               href="/profile"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               <FaUser /> Profile
@@ -187,7 +187,7 @@ export default function ExploreProjects() {
             onClick={() => setActiveCategory(cat.full)}
             className={`px-3 md:px-5 py-1 md:py-1.5 rounded-full text-xs md:text-base font-semibold shadow transition-all duration-300 transform hover:scale-105 active:scale-95 ${
               activeCategory === cat.full
-                ? "bg-blue-600 text-white"
+                ? "bg-cyan-600 text-white"
                 : "bg-white text-gray-700 hover:shadow-md"
             }`}
           >
@@ -217,7 +217,7 @@ export default function ExploreProjects() {
             />
 
             <div className="p-2 md:p-5">
-              <span className="text-xs md:text-sm font-bold text-blue-600 uppercase tracking-wide">
+              <span className="text-xs md:text-sm font-bold text-cyan-600 uppercase tracking-wide">
                 {p.category?.name || "Uncategorized"}
               </span>
 

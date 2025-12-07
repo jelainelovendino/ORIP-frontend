@@ -148,14 +148,14 @@ export default function EditProjectPage() {
   return (
     <div className="min-h-screen bg-[#d7dff0]">
       {/* NAVBAR */}
-      <nav className="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+      <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
           {/* Logo + full name */}
           <a href="/" className="flex items-center gap-3 hover:opacity-90 transition">
             <FaGraduationCap className="text-white text-4xl" />
             <div className="flex flex-col leading-tight">
               <span className="text-xl md:text-2xl font-extrabold text-white">ORIP</span>
-              <span className="text-xs md:text-sm font-semibold text-blue-100">
+              <span className="text-xs md:text-sm font-semibold text-cyan-100">
                 Open Research and Innovation Portfolio
               </span>
             </div>
@@ -166,7 +166,7 @@ export default function EditProjectPage() {
             {!isAuthed && (
               <a
                 href="/"
-                className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+                className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
               >
                 <FaHome className="text-sm" />
                 <span>Home</span>
@@ -174,21 +174,21 @@ export default function EditProjectPage() {
             )}
             <a
               href="/projects"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
             >
               <FaThLarge className="text-sm" />
               <span>Explore</span>
             </a>
             <a
               href="/upload"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
             >
               <FaUpload className="text-sm" />
               <span>Upload</span>
             </a>
             <a
               href="/profile"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
             >
               <FaUser className="text-sm" />
               <span>Profile</span>
@@ -218,11 +218,11 @@ export default function EditProjectPage() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-blue-700 px-6 py-4 space-y-3 border-t border-blue-500">
+          <div className="md:hidden bg-cyan-700 px-6 py-4 space-y-3 border-t border-cyan-500">
             {!isAuthed && (
               <a
                 href="/"
-                className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <FaHome /> Home
@@ -230,21 +230,21 @@ export default function EditProjectPage() {
             )}
             <a
               href="/projects"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               <FaThLarge /> Explore
             </a>
             <a
               href="/upload"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               <FaUpload /> Upload
             </a>
             <a
               href="/profile"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               <FaUser /> Profile
@@ -265,7 +265,7 @@ export default function EditProjectPage() {
       </nav>
 
       <div className="max-w-2xl mx-auto px-4 md:px-4 py-6 md:py-12">
-        <a href="/profile" className="flex items-center gap-2 text-blue-600 mb-4 md:mb-8 hover:text-blue-700 transition font-semibold text-xs md:text-base">
+        <a href="/profile" className="flex items-center gap-2 text-cyan-600 mb-4 md:mb-8 hover:text-cyan-700 transition font-semibold text-xs md:text-base">
           <FaArrowLeft /> Back to Profile
         </a>
 
@@ -296,7 +296,7 @@ export default function EditProjectPage() {
                 value={formData.title}
                 onChange={handleChange}
                 required
-                className="w-full px-2 md:px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 text-xs md:text-base"
+                className="w-full px-2 md:px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-cyan-600 text-xs md:text-base"
                 placeholder="Enter project title"
               />
             </div>
@@ -312,7 +312,7 @@ export default function EditProjectPage() {
                 onChange={handleChange}
                 required
                 rows="4"
-                className="w-full px-2 md:px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 text-xs md:text-base"
+                className="w-full px-2 md:px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-cyan-600 text-xs md:text-base"
                 placeholder="Enter project description"
               />
             </div>
@@ -326,7 +326,7 @@ export default function EditProjectPage() {
                 name="category_id"
                 value={formData.category_id}
                 onChange={handleChange}
-                className="w-full px-2 md:px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 text-xs md:text-base"
+                className="w-full px-2 md:px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-cyan-600 text-xs md:text-base"
               >
                 <option value="">Select a category</option>
                 {categories.map((cat) => (
@@ -342,7 +342,7 @@ export default function EditProjectPage() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-semibold py-2 rounded-lg transition text-xs md:text-base"
+                className="flex-1 flex items-center justify-center gap-1 md:gap-2 bg-cyan-600 hover:bg-cyan-700 disabled:bg-gray-400 text-white font-semibold py-2 rounded-lg transition text-xs md:text-base"
               >
                 {submitting && <FaSpinner className="animate-spin" />}
                 {submitting ? "Saving..." : "Save Changes"}

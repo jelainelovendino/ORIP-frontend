@@ -55,17 +55,17 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-[#d7dff0] to-blue-100">
+    <div className="min-h-screen bg-white">
       
       {/* NAVBAR */}
-      <nav className="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+      <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
           {/* Logo + full name */}
           <a href="/" className="flex items-center gap-3 hover:opacity-90 transition">
             <FaGraduationCap className="text-white text-4xl" />
             <div className="flex flex-col leading-tight">
               <span className="text-xl md:text-2xl font-extrabold text-white">ORIP</span>
-              <span className="text-xs md:text-sm font-semibold text-blue-100">
+              <span className="text-xs md:text-sm font-semibold text-cyan-100">
                 Open Research and Innovation Portfolio
               </span>
             </div>
@@ -75,14 +75,14 @@ export default function RegisterPage() {
           <div className="hidden md:flex items-center gap-6 text-sm font-medium">
             <a
               href="/"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white border-2 border-white hover:bg-white/10 transition-colors font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-white border-2 border-transparent hover:border-white font-semibold"
             >
               <FaHome className="text-sm" />
               <span>Home</span>
             </a>
             <a
               href="/login"
-              className="px-4 py-2 rounded-full bg-white text-blue-700 font-semibold shadow-sm hover:shadow-md transition-shadow"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-cyan-600 font-semibold shadow-sm hover:shadow-md transition-shadow"
             >
               Log In
             </a>
@@ -91,7 +91,7 @@ export default function RegisterPage() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-2xl hover:opacity-80 transition"
+            className="md:hidden text-2xl text-white hover:opacity-80 transition"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <FaTimes /> : <FaBars />}
@@ -100,17 +100,17 @@ export default function RegisterPage() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-blue-700 px-6 py-4 space-y-3 border-t border-blue-500">
+          <div className="md:hidden bg-cyan-700 px-6 py-4 space-y-3 border-t border-cyan-500">
             <a
               href="/"
-              className="block px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="block px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
             </a>
             <a
               href="/login"
-              className="block px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="block px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               Log In
@@ -121,8 +121,8 @@ export default function RegisterPage() {
 
       {/* HEADER */}
       <div className="text-center mt-16 px-6">
-        <h1 className="text-2xl md:text-4xl font-extrabold text-blue-900">Create Your Account</h1>
-        <p className="mt-3 text-blue-700 text-sm md:text-lg leading-relaxed">
+        <h1 className="text-2xl md:text-4xl font-extrabold text-black">Create Your Account</h1>
+        <p className="mt-3 text-black text-sm md:text-lg leading-relaxed">
           Join the community of innovators and researchers
         </p>
       </div>
@@ -132,10 +132,10 @@ export default function RegisterPage() {
         <div className="w-full max-w-md">
           {/* TAB SWITCHER */}
           <div className="flex bg-white rounded-t-2xl shadow-lg overflow-hidden mb-0">
-            <a href="/login" className="flex-1 px-6 py-3 bg-white text-blue-600 font-semibold text-center hover:bg-blue-50 transition-colors border-r border-gray-200">
+            <a href="/login" className="flex-1 px-6 py-3 bg-white text-cyan-600 font-semibold text-center hover:bg-cyan-50 transition-colors border-r border-gray-200">
               Log In
             </a>
-            <a href="/register" className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold text-center hover:bg-blue-700 transition-colors">
+            <a href="/register" className="flex-1 px-6 py-3 bg-cyan-600 text-white font-semibold text-center hover:bg-cyan-700 transition-colors">
               Sign Up
             </a>
           </div>
@@ -145,9 +145,9 @@ export default function RegisterPage() {
             <form onSubmit={handleRegister} className="space-y-4">
               {/* Name */}
               <div>
-                <label className="block font-semibold text-blue-900 mb-2">Full Name</label>
+                <label className="block font-semibold text-cyan-900 mb-2">Full Name</label>
                 <input
-                  className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition-all"
+                  className="w-full px-4 py-3 bg-cyan-50 border-2 border-cyan-200 rounded-lg focus:outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-300 transition-all"
                   placeholder="Your Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -157,10 +157,10 @@ export default function RegisterPage() {
 
               {/* Email */}
               <div>
-                <label className="block font-semibold text-blue-900 mb-2">Email Address</label>
+                <label className="block font-semibold text-cyan-900 mb-2">Email Address</label>
                 <input
                   type="email"
-                  className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition-all"
+                  className="w-full px-4 py-3 bg-cyan-50 border-2 border-cyan-200 rounded-lg focus:outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-300 transition-all"
                   placeholder="your.email@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -170,10 +170,10 @@ export default function RegisterPage() {
 
               {/* Password */}
               <div>
-                <label className="block font-semibold text-blue-900 mb-2">Password</label>
+                <label className="block font-semibold text-cyan-900 mb-2">Password</label>
                 <input
                   type="password"
-                  className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition-all"
+                  className="w-full px-4 py-3 bg-cyan-50 border-2 border-cyan-200 rounded-lg focus:outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-300 transition-all"
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -183,10 +183,10 @@ export default function RegisterPage() {
 
               {/* Confirm Password */}
               <div>
-                <label className="block font-semibold text-blue-900 mb-2">Confirm Password</label>
+                <label className="block font-semibold text-cyan-900 mb-2">Confirm Password</label>
                 <input
                   type="password"
-                  className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition-all"
+                  className="w-full px-4 py-3 bg-cyan-50 border-2 border-cyan-200 rounded-lg focus:outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-300 transition-all"
                   placeholder="••••••••"
                   value={password_confirmation}
                   onChange={(e) => setPasswordConfirmation(e.target.value)}
@@ -196,11 +196,11 @@ export default function RegisterPage() {
 
               {/* Bio */}
               <div>
-                <label className="block font-semibold text-blue-900 mb-2">Bio <span className="text-sm text-gray-600 font-normal">(optional)</span></label>
+                <label className="block font-semibold text-cyan-900 mb-2">Bio <span className="text-sm text-gray-600 font-normal">(optional)</span></label>
                 <textarea
                   rows={2}
                   maxLength={500}
-                  className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition-all resize-none"
+                  className="w-full px-4 py-3 bg-cyan-50 border-2 border-cyan-200 rounded-lg focus:outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-300 transition-all resize-none"
                   placeholder="Tell us about your research interests..."
                   value={bio}
                   onChange={(e) => setBio(e.target.value)}
@@ -210,9 +210,9 @@ export default function RegisterPage() {
 
               {/* Course / Program */}
               <div>
-                <label className="block font-semibold text-blue-900 mb-2">Course / Program</label>
+                <label className="block font-semibold text-cyan-900 mb-2">Course / Program</label>
                 <input
-                  className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition-all"
+                  className="w-full px-4 py-3 bg-cyan-50 border-2 border-cyan-200 rounded-lg focus:outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-300 transition-all"
                   placeholder="BSIT, BSM, BSEd, etc."
                   value={course}
                   onChange={(e) => setCourse(e.target.value)}
@@ -221,9 +221,9 @@ export default function RegisterPage() {
 
               {/* Department */}
               <div>
-                <label className="block font-semibold text-blue-900 mb-2">Department</label>
+                <label className="block font-semibold text-cyan-900 mb-2">Department</label>
                 <input
-                  className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition-all"
+                  className="w-full px-4 py-3 bg-cyan-50 border-2 border-cyan-200 rounded-lg focus:outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-300 transition-all"
                   placeholder="CICT, CTE, CAS, etc."
                   value={department}
                   onChange={(e) => setDepartment(e.target.value)}
@@ -232,9 +232,9 @@ export default function RegisterPage() {
 
               {/* School / University */}
               <div>
-                <label className="block font-semibold text-blue-900 mb-2">School / University</label>
+                <label className="block font-semibold text-cyan-900 mb-2">School / University</label>
                 <input
-                  className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition-all"
+                  className="w-full px-4 py-3 bg-cyan-50 border-2 border-cyan-200 rounded-lg focus:outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-300 transition-all"
                   placeholder="Sorsogon State University"
                   value={school}
                   onChange={(e) => setSchool(e.target.value)}
@@ -251,7 +251,7 @@ export default function RegisterPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg mt-6"
+                className="w-full py-3 bg-cyan-600 text-white rounded-lg font-semibold hover:bg-cyan-700 transition-all transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg mt-6"
               >
                 Create Account
               </button>
@@ -278,7 +278,7 @@ export default function RegisterPage() {
             {/* Login Link */}
             <a
               href="/login"
-              className="block w-full py-3 border-2 border-blue-600 text-blue-600 rounded-lg text-center font-semibold hover:bg-blue-50 transition-colors"
+              className="block w-full py-3 border-2 border-cyan-600 text-cyan-600 rounded-lg text-center font-semibold hover:bg-cyan-50 transition-colors"
             >
               Log In
             </a>

@@ -54,17 +54,17 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-[#d7dff0] to-blue-100">
+    <div className="min-h-screen bg-white">
       
       {/* NAVBAR */}
-      <nav className="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+      <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
           {/* Logo + full name */}
           <a href="/" className="flex items-center gap-3 hover:opacity-90 transition">
             <FaGraduationCap className="text-white text-4xl" />
             <div className="flex flex-col leading-tight">
               <span className="text-xl md:text-2xl font-extrabold text-white">ORIP</span>
-              <span className="text-xs md:text-sm font-semibold text-blue-100">
+              <span className="text-xs md:text-sm font-semibold text-cyan-100">
                 Open Research and Innovation Portfolio
               </span>
             </div>
@@ -74,23 +74,23 @@ export default function LoginPage() {
           <div className="hidden md:flex items-center gap-6 text-sm font-medium">
             <a
               href="/"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white border-2 border-white hover:bg-white/10 transition-colors font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-cyan-600 font-semibold shadow-sm hover:shadow-md transition-shadow"
             >
               <FaHome className="text-sm" />
               <span>Home</span>
             </a>
             <a
               href="/login"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-blue-700 font-semibold shadow-sm hover:shadow-md transition-shadow"
+              className="px-4 py-2 rounded-full text-white border-2 border-white hover:bg-white/20 transition-colors font-semibold"
             >
-              <span>Log In</span>
+              Log In
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-2xl hover:opacity-80 transition"
+            className="md:hidden text-2xl text-white hover:opacity-80 transition"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <FaTimes /> : <FaBars />}
@@ -99,17 +99,17 @@ export default function LoginPage() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-blue-700 px-6 py-4 space-y-3 border-t border-blue-500">
+          <div className="md:hidden bg-cyan-700 px-6 py-4 space-y-3 border-t border-cyan-500">
             <a
               href="/"
-              className="block px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="block px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
             </a>
             <a
               href="/login"
-              className="block px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="block px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               Log In
@@ -120,8 +120,8 @@ export default function LoginPage() {
 
       {/* HEADER */}
       <div className="text-center mt-16 px-6">
-        <h1 className="text-2xl md:text-4xl font-extrabold text-blue-900">Welcome Back</h1>
-        <p className="mt-3 text-blue-700 text-sm md:text-lg leading-relaxed">
+        <h1 className="text-2xl md:text-4xl font-extrabold text-black">Welcome Back</h1>
+        <p className="mt-3 text-black text-sm md:text-lg leading-relaxed">
           Share your research and connect with innovators
         </p>
       </div>
@@ -131,10 +131,10 @@ export default function LoginPage() {
         <div className="w-full max-w-md">
           {/* TAB SWITCHER */}
           <div className="flex bg-white rounded-t-2xl shadow-lg overflow-hidden mb-0">
-            <a href="/login" className="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold text-center hover:bg-blue-700 transition-colors">
+            <a href="/login" className="flex-1 px-6 py-3 bg-cyan-600 text-white font-semibold text-center hover:bg-cyan-700 transition-colors">
               Log In
             </a>
-            <a href="/register" className="flex-1 px-6 py-3 bg-white text-blue-600 font-semibold text-center hover:bg-blue-50 transition-colors border-l border-gray-200">
+            <a href="/register" className="flex-1 px-6 py-3 bg-white text-cyan-600 font-semibold text-center hover:bg-cyan-50 transition-colors border-l border-gray-200">
               Sign Up
             </a>
           </div>
@@ -144,11 +144,11 @@ export default function LoginPage() {
             <form onSubmit={handleLogin} className="space-y-5">
               {/* Email */}
               <div>
-                <label className="block font-semibold text-blue-900 mb-2">Email Address</label>
+                <label className="block font-semibold text-cyan-900 mb-2">Email Address</label>
                 <input
                   type="email"
                   value={email}
-                  className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition-all"
+                  className="w-full px-4 py-3 bg-cyan-50 border-2 border-cyan-200 rounded-lg focus:outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-300 transition-all"
                   placeholder="your.email@example.com"
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -157,11 +157,11 @@ export default function LoginPage() {
 
               {/* Password */}
               <div>
-                <label className="block font-semibold text-blue-900 mb-2">Password</label>
+                <label className="block font-semibold text-cyan-900 mb-2">Password</label>
                 <input
                   type="password"
                   value={password}
-                  className="w-full px-4 py-3 bg-blue-50 border-2 border-blue-200 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition-all"
+                  className="w-full px-4 py-3 bg-cyan-50 border-2 border-cyan-200 rounded-lg focus:outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-300 transition-all"
                   placeholder="••••••••"
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -178,7 +178,7 @@ export default function LoginPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+                className="w-full py-3 bg-cyan-600 text-white rounded-lg font-semibold hover:bg-cyan-700 transition-all transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
               >
                 Log In
               </button>
@@ -205,7 +205,7 @@ export default function LoginPage() {
             {/* Sign Up Link */}
             <a
               href="/register"
-              className="block w-full py-3 border-2 border-blue-600 text-blue-600 rounded-lg text-center font-semibold hover:bg-blue-50 transition-colors"
+              className="block w-full py-3 border-2 border-cyan-600 text-cyan-600 rounded-lg text-center font-semibold hover:bg-cyan-50 transition-colors"
             >
               Create an Account
             </a>

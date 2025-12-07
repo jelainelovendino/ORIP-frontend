@@ -135,14 +135,14 @@ export default function ProjectPage() {
     <div className="min-h-screen bg-[#D6DDF2]">
 
       {/* NAVBAR */}
-      <nav className="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+      <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
           {/* Logo + full name */}
           <a href="/" className="flex items-center gap-3 hover:opacity-90 transition">
             <FaGraduationCap className="text-white text-4xl" />
             <div className="flex flex-col leading-tight">
               <span className="text-xl md:text-2xl font-extrabold text-white">ORIP</span>
-              <span className="text-xs md:text-sm font-semibold text-blue-100">
+              <span className="text-xs md:text-sm font-semibold text-cyan-100">
                 Open Research and Innovation Portfolio
               </span>
             </div>
@@ -153,7 +153,7 @@ export default function ProjectPage() {
             {!isAuthed && (
               <a
                 href="/"
-                className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+                className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
               >
                 <FaHome className="text-sm" />
                 <span>Home</span>
@@ -163,7 +163,7 @@ export default function ProjectPage() {
               <>
                 <a
                   href="/admin"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
                 >
                   <FaThLarge className="text-sm" />
                   <span>Admin Dashboard</span>
@@ -173,21 +173,21 @@ export default function ProjectPage() {
               <>
                 <a
                   href="/projects"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
                 >
                   <FaThLarge className="text-sm" />
                   <span>Explore</span>
                 </a>
                 <a
                   href="/upload"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
                 >
                   <FaUpload className="text-sm" />
                   <span>Upload</span>
                 </a>
                 <a
                   href="/profile"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
                 >
                   <FaUser className="text-sm" />
                   <span>Profile</span>
@@ -219,11 +219,11 @@ export default function ProjectPage() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-blue-700 px-6 py-4 space-y-3 border-t border-blue-500">
+          <div className="md:hidden bg-cyan-700 px-6 py-4 space-y-3 border-t border-cyan-500">
             {!isAuthed && (
               <a
                 href="/"
-                className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <FaHome /> Home
@@ -233,7 +233,7 @@ export default function ProjectPage() {
               <>
                 <a
                   href="/admin"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <FaThLarge /> Admin Dashboard
@@ -243,21 +243,21 @@ export default function ProjectPage() {
               <>
                 <a
                   href="/projects"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <FaThLarge /> Explore
                 </a>
                 <a
                   href="/upload"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <FaUpload /> Upload
                 </a>
                 <a
                   href="/profile"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <FaUser /> Profile
@@ -282,7 +282,7 @@ export default function ProjectPage() {
       {/* MAIN CONTENT */}
       <div className="px-4 md:px-12 py-6 md:py-12 max-w-5xl mx-auto">
 
-        <a href="/projects" className="flex items-center gap-2 text-blue-600 mb-4 md:mb-8 hover:text-blue-700 transition font-semibold text-xs md:text-base">
+        <a href="/projects" className="flex items-center gap-2 text-cyan-600 mb-4 md:mb-8 hover:text-cyan-700 transition font-semibold text-xs md:text-base">
           <FaArrowLeft /> Back to Projects
         </a>
 
@@ -301,7 +301,7 @@ export default function ProjectPage() {
 
           {/* CATEGORY & TITLE */}
           <div className="mb-4 md:mb-8">
-            <span className="text-xs md:text-sm font-bold text-blue-600 uppercase tracking-wide">
+            <span className="text-xs md:text-sm font-bold text-cyan-600 uppercase tracking-wide">
               {(project.category && project.category.name) || 'Uncategorized'}
             </span>
             <h1 className="text-2xl md:text-4xl font-bold mt-2 md:mt-3 text-gray-900">
@@ -313,7 +313,7 @@ export default function ProjectPage() {
           <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-8 p-3 md:p-4 bg-gray-50 rounded-lg">
             <img
               src={avatar}
-              className="w-10 md:w-14 h-10 md:h-14 rounded-full object-cover border-2 border-blue-200"
+              className="w-10 md:w-14 h-10 md:h-14 rounded-full object-cover border-2 border-cyan-200"
               alt={(project.user && project.user.name) || 'Author avatar'}
               onError={(e) => {
                 e.currentTarget.onerror = null;
@@ -339,7 +339,7 @@ export default function ProjectPage() {
             <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-2 md:mb-4">Project File</h2>
             {project.file_url ? (
               <div className="space-y-3 md:space-y-4">
-                <div className="flex items-center justify-between bg-gradient-to-r from-blue-50 to-blue-100 p-3 md:p-6 rounded-lg border border-blue-200 flex-col md:flex-row gap-3 md:gap-0">
+                <div className="flex items-center justify-between bg-gradient-to-r from-cyan-50 to-cyan-100 p-3 md:p-6 rounded-lg border border-cyan-200 flex-col md:flex-row gap-3 md:gap-0">
                   <div>
                     <p className="font-semibold text-gray-900 text-sm md:text-base">
                       {project.file_path.split('/').pop()}
@@ -352,7 +352,7 @@ export default function ProjectPage() {
                     href={project.file_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-3 md:px-4 py-2 rounded-lg transition font-semibold text-xs md:text-base"
+                    className="flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white px-3 md:px-4 py-2 rounded-lg transition font-semibold text-xs md:text-base"
                   >
                     View File
                   </a>
@@ -363,7 +363,7 @@ export default function ProjectPage() {
                   <button
                     onClick={handlePreviewClick}
                     disabled={loadingPreview}
-                    className="w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 md:px-4 py-2 md:py-3 rounded-lg transition font-semibold text-xs md:text-base disabled:bg-gray-400"
+                    className="w-full flex items-center justify-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white px-3 md:px-4 py-2 md:py-3 rounded-lg transition font-semibold text-xs md:text-base disabled:bg-gray-400"
                   >
                     <FaEye className="text-base md:text-lg" />
                     {loadingPreview ? "Loading..." : "View Code/Preview"}
@@ -372,7 +372,7 @@ export default function ProjectPage() {
 
                 {/* PDF/WORD PREVIEW INFO */}
                 {(isPdfFile(project.file_path) || isWordFile(project.file_path)) && (
-                  <div className="bg-blue-50 border border-blue-200 p-3 md:p-4 rounded-lg text-center text-xs md:text-sm text-gray-700">
+                  <div className="bg-cyan-50 border border-cyan-200 p-3 md:p-4 rounded-lg text-center text-xs md:text-sm text-gray-700">
                     <p>Click 'View File' to open the document in your browser.</p>
                   </div>
                 )}

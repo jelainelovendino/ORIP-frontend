@@ -81,17 +81,17 @@ export default function UploadProject() {
   };
 
   return (
-    <div className="min-h-screen bg-[#d7dff0] pb-20">
+    <div className="min-h-screen bg-white pb-20">
       
       {/* NAVBAR */}
-      <nav className="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+      <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
           {/* Logo + full name */}
           <a href="/" className="flex items-center gap-3 hover:opacity-90 transition">
             <FaGraduationCap className="text-white text-4xl" />
             <div className="flex flex-col leading-tight">
               <span className="text-xl md:text-2xl font-extrabold text-white">ORIP</span>
-              <span className="text-xs md:text-sm font-semibold text-blue-100">
+              <span className="text-xs md:text-sm font-semibold text-cyan-100">
                 Open Research and Innovation Portfolio
               </span>
             </div>
@@ -101,21 +101,21 @@ export default function UploadProject() {
           <div className="hidden md:flex items-center gap-4 text-sm font-medium">
             <a
               href="/projects"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
             >
               <FaThLarge className="text-sm" />
               <span>Explore</span>
             </a>
             <a
               href="/upload"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-blue-700 font-semibold shadow-sm hover:shadow-md transition-shadow"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-cyan-600 font-semibold shadow-sm hover:shadow-md transition-shadow"
             >
               <FaCloudUploadAlt className="text-sm" />
               <span>Upload</span>
             </a>
             <a
               href="/profile"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
             >
               <FaUser className="text-sm" />
               <span>Profile</span>
@@ -134,7 +134,7 @@ export default function UploadProject() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-2xl hover:opacity-80 transition"
+            className="md:hidden text-2xl text-white hover:opacity-80 transition"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <FaTimes /> : <FaBars />}
@@ -143,24 +143,24 @@ export default function UploadProject() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-blue-700 px-6 py-4 space-y-3 border-t border-blue-500">
+          <div className="md:hidden bg-cyan-700 px-6 py-4 space-y-3 border-t border-cyan-500">
             <a
               href="/projects"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               <FaThLarge /> Explore
             </a>
             <a
               href="/upload"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               <FaCloudUploadAlt /> Upload
             </a>
             <a
               href="/profile"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               <FaUser /> Profile
@@ -188,13 +188,13 @@ export default function UploadProject() {
       </div>
 
       {/* FORM BOX */}
-      <div className="max-w-xs md:max-w-2xl mx-auto mt-6 md:mt-10 bg-blue-300 rounded-lg p-2 md:p-10 shadow-lg mx-4">
+      <div className="max-w-xs md:max-w-2xl mx-auto mt-6 md:mt-10 bg-cyan-50 rounded-lg p-2 md:p-10 shadow-lg mx-4">
 
         {/* TITLE */}
         <div className="mb-4 md:mb-6">
           <label className="font-semibold text-gray-900 text-sm md:text-base">Project Title</label>
           <input
-            className="w-full p-1.5 md:p-3 bg-white rounded-md mt-2 outline-none border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-xs md:text-base"
+            className="w-full p-1.5 md:p-3 bg-white rounded-md mt-2 outline-none border border-cyan-300 focus:border-cyan-600 focus:ring-1 focus:ring-cyan-500 text-xs md:text-base"
             placeholder="e.g., Smart Water Management System"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -206,7 +206,7 @@ export default function UploadProject() {
         <div className="mb-4 md:mb-6">
           <label className="font-semibold text-gray-900 text-sm md:text-base">Description / Abstract</label>
           <textarea
-            className="w-full p-1.5 md:p-3 bg-white rounded-md mt-2 outline-none border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 h-16 md:h-28 text-xs md:text-base"
+            className="w-full p-1.5 md:p-3 bg-white rounded-md mt-2 outline-none border border-cyan-300 focus:border-cyan-600 focus:ring-1 focus:ring-cyan-500 h-16 md:h-28 text-xs md:text-base"
             placeholder="Describe your project, methodology, and key outcomes..."
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -218,7 +218,7 @@ export default function UploadProject() {
         <div className="mb-4 md:mb-6">
           <label className="font-semibold text-gray-900 text-sm md:text-base">Category</label>
           <select
-            className="w-full p-1.5 md:p-3 bg-white rounded-md mt-2 outline-none border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-xs md:text-base"
+            className="w-full p-1.5 md:p-3 bg-white rounded-md mt-2 outline-none border border-cyan-300 focus:border-cyan-600 focus:ring-1 focus:ring-cyan-500 text-xs md:text-base"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             required
@@ -234,8 +234,8 @@ export default function UploadProject() {
         {/* FILE UPLOAD */}
         <div className="mb-4 md:mb-6">
           <label className="font-semibold text-gray-900 block mb-2 text-sm md:text-base">Project File</label>
-          <div className="border-2 border-dashed border-blue-400 bg-white p-4 md:p-8 text-center rounded-lg hover:border-blue-600 hover:bg-blue-50 transition-colors cursor-pointer">
-            <FaFileUpload className="text-2xl md:text-4xl text-blue-500 mx-auto mb-2 md:mb-3" />
+          <div className="border-2 border-dashed border-cyan-400 bg-white p-4 md:p-8 text-center rounded-lg hover:border-cyan-600 hover:bg-cyan-50 transition-colors cursor-pointer">
+            <FaFileUpload className="text-2xl md:text-4xl text-cyan-600 mx-auto mb-2 md:mb-3" />
             <p className="text-sm md:text-lg font-semibold text-gray-700 mb-1">Upload your project files</p>
             <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">
               PDF or Word documents (.pdf, .docx, .doc)
@@ -249,7 +249,7 @@ export default function UploadProject() {
             />
             <label
               htmlFor="fileInput"
-              className="inline-block text-blue-600 font-semibold text-xs md:text-sm hover:text-blue-800 transition-colors cursor-pointer mt-4 md:mt-6"
+              className="inline-block text-cyan-600 font-semibold text-xs md:text-sm hover:text-cyan-800 transition-colors cursor-pointer mt-4 md:mt-6"
             >
               Choose File
             </label>
@@ -277,7 +277,7 @@ export default function UploadProject() {
           <button
             onClick={handleUpload}
             disabled={isLoading}
-            className="flex-1 py-3 text-xs md:text-base bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex-1 py-3 text-xs md:text-base bg-cyan-600 text-white rounded-md font-semibold hover:bg-cyan-700 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <FaCloudUploadAlt className="text-lg" />
             {isLoading ? "Uploading..." : "Publish Project"}

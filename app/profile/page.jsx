@@ -89,17 +89,17 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f3f6fb] pb-16">
+    <div className="min-h-screen bg-white pb-16">
 
       {/* NAVBAR */}
-      <nav className="bg-blue-600 text-white shadow-lg sticky top-0 z-50">
+      <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
           {/* Logo + full name */}
           <a href="/" className="flex items-center gap-3 hover:opacity-90 transition">
             <FaGraduationCap className="text-white text-4xl" />
             <div className="flex flex-col leading-tight">
               <span className="text-xl md:text-2xl font-extrabold text-white">ORIP</span>
-              <span className="text-xs md:text-sm font-semibold text-blue-100">
+              <span className="text-xs md:text-sm font-semibold text-cyan-100">
                 Open Research and Innovation Portfolio
               </span>
             </div>
@@ -109,21 +109,21 @@ export default function ProfilePage() {
           <div className="hidden md:flex items-center gap-4 text-sm font-medium">
             <a
               href="/projects"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
             >
               <FaThLarge className="text-sm" />
               <span>Explore</span>
             </a>
             <a
               href="/upload"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/10 transition-colors font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-white hover:bg-white/20 transition-colors font-semibold"
             >
               <FaCloudUploadAlt className="text-sm" />
               <span>Upload</span>
             </a>
             <a
               href="/profile"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-blue-700 font-semibold shadow-sm hover:shadow-md transition-shadow"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-cyan-600 font-semibold shadow-sm hover:shadow-md transition-shadow"
             >
               <FaUser className="text-sm" />
               <span>Profile</span>
@@ -142,7 +142,7 @@ export default function ProfilePage() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-2xl hover:opacity-80 transition"
+            className="md:hidden text-2xl text-white hover:opacity-80 transition"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <FaTimes /> : <FaBars />}
@@ -151,24 +151,24 @@ export default function ProfilePage() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-blue-700 px-6 py-4 space-y-3 border-t border-blue-500">
+          <div className="md:hidden bg-cyan-700 px-6 py-4 space-y-3 border-t border-cyan-500">
             <a
               href="/projects"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               <FaThLarge /> Explore
             </a>
             <a
               href="/upload"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               <FaCloudUploadAlt /> Upload
             </a>
             <a
               href="/profile"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-blue-600 transition text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-cyan-600 transition text-white font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
               <FaUser /> Profile
@@ -205,9 +205,9 @@ export default function ProfilePage() {
                 <p className="text-xs md:text-base text-gray-600 mt-1">{user?.email || '—'}</p>
 
                 <div className="mt-3 md:mt-4 flex flex-wrap gap-2 md:gap-3 text-xs md:text-sm">
-                  <span className="px-2 md:px-3 py-1 bg-blue-50 text-blue-700 rounded">{user?.course || 'Course —'}</span>
-                  <span className="px-2 md:px-3 py-1 bg-blue-50 text-blue-700 rounded">{user?.school || 'School —'}</span>
-                  <span className="px-2 md:px-3 py-1 bg-blue-50 text-blue-700 rounded">{user?.department || 'Department —'}</span>
+                  <span className="px-2 md:px-3 py-1 bg-cyan-50 text-cyan-700 rounded">{user?.course || 'Course —'}</span>
+                  <span className="px-2 md:px-3 py-1 bg-cyan-50 text-cyan-700 rounded">{user?.school || 'School —'}</span>
+                  <span className="px-2 md:px-3 py-1 bg-cyan-50 text-cyan-700 rounded">{user?.department || 'Department —'}</span>
                 </div>
               </div>
 
@@ -233,8 +233,8 @@ export default function ProfilePage() {
 
           {projectCount === 0 ? (
             <div className="bg-white rounded-xl shadow p-6 text-center">
-              <p className="text-gray-700 mb-4">You haven’t uploaded any projects yet.</p>
-              <a href="/upload" className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Upload your first project</a>
+              <p className="text-gray-700 mb-4">You haven't uploaded any projects yet.</p>
+              <a href="/upload" className="px-4 py-2 bg-cyan-600 text-white rounded hover:bg-cyan-700">Upload your first project</a>
             </div>
           ) : (
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
