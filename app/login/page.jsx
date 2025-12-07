@@ -26,6 +26,8 @@ export default function LoginPage() {
         password,
       });
 
+      console.log("Login response:", response.data); // DEBUG
+
       // save token
       const token = response.data.access_token || response.data.token || response.data.token_value;
       const tokenType = response.data.token_type || response.data.tokenType || 'Bearer';
@@ -34,8 +36,18 @@ export default function LoginPage() {
         localStorage.setItem("token_type", tokenType);
       }
 
-      // redirect
-      window.location.href = "/projects";
+      // save user role if available (from backend /api/login response)
+      const userRole = response.data.user?.role;
+      console.log("User role from response:", userRole); // DEBUG
+      if (userRole) {
+        localStorage.setItem("user_role", userRole);
+        console.log("Saved user_role to localStorage:", userRole); // DEBUG
+      }
+
+      // redirect based on role
+      const redirectPath = userRole === 'admin' ? "/admin" : "/projects";
+      console.log("Redirecting to:", redirectPath); // DEBUG
+      window.location.href = redirectPath;
     } catch (err) {
       setError("Invalid credentials. Try again.");
     }
