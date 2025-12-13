@@ -54,7 +54,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#d7dff0]">
       
       {/* NAVBAR */}
       <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
@@ -74,14 +74,14 @@ export default function LoginPage() {
           <div className="hidden md:flex items-center gap-6 text-sm font-medium">
             <a
               href="/"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-cyan-600 font-semibold shadow-sm hover:shadow-md transition-shadow"
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-white border-2 border-transparent hover:border-white hover:bg-white/20 transition-colors font-semibold"
             >
               <FaHome className="text-sm" />
               <span>Home</span>
             </a>
             <a
               href="/login"
-              className="px-4 py-2 rounded-full text-white border-2 border-white hover:bg-white/20 transition-colors font-semibold"
+              className="px-4 py-2 rounded-full bg-white text-cyan-600 font-semibold shadow-sm hover:shadow-md transition-shadow"
             >
               Log In
             </a>
@@ -120,8 +120,8 @@ export default function LoginPage() {
 
       {/* HEADER */}
       <div className="text-center mt-16 px-6">
-        <h1 className="text-2xl md:text-4xl font-extrabold text-black">Welcome Back</h1>
-        <p className="mt-3 text-black text-sm md:text-lg leading-relaxed">
+        <h1 className="text-2xl md:text-4xl font-extrabold text-gray-900">Welcome Back</h1>
+        <p className="mt-3 text-gray-700 text-sm md:text-lg leading-relaxed">
           Share your research and connect with innovators
         </p>
       </div>
