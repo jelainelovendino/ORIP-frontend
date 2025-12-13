@@ -55,7 +55,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#d7dff0]">
       
       {/* NAVBAR */}
       <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
@@ -75,16 +75,16 @@ export default function RegisterPage() {
           <div className="hidden md:flex items-center gap-6 text-sm font-medium">
             <a
               href="/"
-              className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-white border-2 border-transparent hover:border-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-white border-2 border-transparent hover:border-white hover:bg-white/20 transition-colors font-semibold"
             >
               <FaHome className="text-sm" />
               <span>Home</span>
             </a>
             <a
-              href="/login"
+              href="/register"
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-cyan-600 font-semibold shadow-sm hover:shadow-md transition-shadow"
             >
-              Log In
+              Sign Up
             </a>
           </div>
 
@@ -121,8 +121,8 @@ export default function RegisterPage() {
 
       {/* HEADER */}
       <div className="text-center mt-16 px-6">
-        <h1 className="text-2xl md:text-4xl font-extrabold text-black">Create Your Account</h1>
-        <p className="mt-3 text-black text-sm md:text-lg leading-relaxed">
+        <h1 className="text-2xl md:text-4xl font-extrabold text-gray-900">Create Your Account</h1>
+        <p className="mt-3 text-gray-700 text-sm md:text-lg leading-relaxed">
           Join the community of innovators and researchers
         </p>
       </div>
