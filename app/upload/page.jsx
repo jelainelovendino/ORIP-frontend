@@ -81,7 +81,7 @@ export default function UploadProject() {
   };
 
   return (
-    <div className="min-h-screen bg-white pb-20">
+    <div className="min-h-screen bg-[#d7dff0] pb-20">
       
       {/* NAVBAR */}
       <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
@@ -188,7 +188,7 @@ export default function UploadProject() {
       </div>
 
       {/* FORM BOX */}
-      <div className="max-w-xs md:max-w-2xl mx-auto mt-6 md:mt-10 bg-cyan-50 rounded-lg p-2 md:p-10 shadow-lg mx-4">
+      <div className="max-w-xs md:max-w-2xl mx-auto mt-6 md:mt-10 bg-white rounded-lg p-2 md:p-10 shadow-lg mx-4">
 
         {/* TITLE */}
         <div className="mb-4 md:mb-6">
