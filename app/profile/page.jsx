@@ -89,7 +89,7 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white pb-16">
+    <div className="min-h-screen bg-[#d7dff0] pb-16">
 
       {/* NAVBAR */}
       <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
