@@ -101,7 +101,7 @@ export default function ProjectPage() {
   }, [id]);
 
   if (!project) return (
-    <div className="min-h-screen bg-[#D6DDF2] flex items-center justify-center">
+    <div className="min-h-screen bg-[#d7dff0] flex items-center justify-center">
       <div className="text-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
         <p className="text-gray-700 font-semibold">Loading project...</p>
@@ -110,7 +110,7 @@ export default function ProjectPage() {
   );
 
   if (project && project.error) return (
-    <div className="min-h-screen bg-[#D6DDF2] flex items-center justify-center">
+    <div className="min-h-screen bg-[#d7dff0] flex items-center justify-center">
       <div className="text-center bg-white p-8 rounded-lg shadow-lg max-w-md">
         <p className="text-red-600 font-semibold mb-4">⚠️ Error Loading Project</p>
         <p className="text-gray-700 mb-4">{project.error}</p>
@@ -132,7 +132,7 @@ export default function ProjectPage() {
   const thumbnail = project.thumbnail_url || '/default-thumbnail.svg';
 
   return (
-    <div className="min-h-screen bg-[#D6DDF2]">
+    <div className="min-h-screen bg-[#d7dff0]">
 
       {/* NAVBAR */}
       <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
@@ -339,7 +339,7 @@ export default function ProjectPage() {
             <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-2 md:mb-4">Project File</h2>
             {project.file_url ? (
               <div className="space-y-3 md:space-y-4">
-                <div className="flex items-center justify-between bg-gradient-to-r from-cyan-50 to-cyan-100 p-3 md:p-6 rounded-lg border border-cyan-200 flex-col md:flex-row gap-3 md:gap-0">
+                <div className="flex items-center justify-between bg-white p-3 md:p-6 rounded-lg border border-gray-200 flex-col md:flex-row gap-3 md:gap-0">
                   <div>
                     <p className="font-semibold text-gray-900 text-sm md:text-base">
                       {project.file_path.split('/').pop()}
