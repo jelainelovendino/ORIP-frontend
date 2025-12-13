@@ -2,12 +2,14 @@
 import { FaGraduationCap, FaArrowRight, FaHome, FaThLarge, FaUserCircle, FaBars, FaTimes } from "react-icons/fa";
 import { MdUpload } from "react-icons/md";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div className="min-h-screen bg-[#d7dff0] font-sans">
       {/* NAVBAR */}
       <nav className="bg-cyan-600 text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
@@ -125,7 +127,7 @@ export default function HomePage() {
       </section>
 
       {/* STATS */}
-      <section className="bg-cyan-50 mt-12 py-8 text-center">
+      <section className="bg-white mt-12 py-8 text-center">
         <div className="max-w-5xl mx-auto px-8">
           <h2 className="text-lg md:text-2xl font-bold text-slate-900 mb-3 md:mb-6">Trusted by the Community</h2>
           <div className="flex flex-wrap justify-center gap-3 md:gap-16">
